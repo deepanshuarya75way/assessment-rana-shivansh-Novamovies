@@ -3,7 +3,7 @@ const cors = require('cors');
 const crypto = require("crypto"); 
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -47,7 +47,7 @@ if(!userid||!deviceName){
     message:"userid and deviceName are required",
   });
 }
-const oldSession = session.get(String(userid));
+const oldSession = session.get(id)||null;
 const newSession = {
   sessionId:crypto.randomUUID(),
   userid:String(userid),

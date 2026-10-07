@@ -10,7 +10,7 @@ import MoviePlayer from './components/MoviePlayer'
 import TvPlayer from './components/TvPlayer'
 import NewPopular from './components/NewPopular'
 
-const API_URL = 'http://localhost:5000'
+const API_URL = ''
 
 const SessionLogin = ({ onLogin }) => {
   const [userid, setUserid] = useState('')
